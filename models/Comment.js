@@ -12,10 +12,8 @@ Comment.init(
       autoIncrement: true,
     },
     comment_text: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.TEXT,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
       validate: {
         len: [1],
       },
