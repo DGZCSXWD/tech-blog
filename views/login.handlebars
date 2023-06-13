@@ -1,6 +1,7 @@
-{{> menu }}
+{{!-- {{> menu }}
 
 <form id="login-form">
+  <p>If you have an account, please login</p>
   <input type="text" name="username" placeholder="Username" required />
   <input type="password" name="password" placeholder="Password" required />
   <button type="submit">Log in</button>
@@ -8,8 +9,35 @@
 <script src="/js/login.js"></script>
 
 <form id="signup-form">
+  <p>If you are new user, please sign up</p>
   <input type="text" name="username" placeholder="Username" required />
   <input type="password" name="password" placeholder="Password" required />
   <button type="submit">Sign up</button>
+</form>
+<script src="/js/signup.js"></script> --}}
+
+{{> menu }}
+
+<form id="login-form" class="mb-4">
+  <p>If you have an account, please login</p>
+  <div class="form-group">
+    <input type="text" name="username" placeholder="Username" required class="form-control" />
+  </div>
+  <div class="form-group">
+    <input type="password" name="password" placeholder="Password" required class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Log in</button>
+</form>
+<script src="/js/login.js"></script>
+
+<form id="signup-form" class="mb-4">
+  <p>If you are a new user, please sign up</p>
+  <div class="form-group">
+    <input type="text" name="username" placeholder="Username" required class="form-control" />
+  </div>
+  <div class="form-group">
+    <input type="password" name="password" placeholder="Password" required class="form-control" />
+  </div>
+  <button type="submit" class="btn btn-primary">Sign up</button>
 </form>
 <script src="/js/signup.js"></script>

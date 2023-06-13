@@ -1,9 +1,26 @@
-{{> menu }}
+{{!-- {{> menu }}
 
 <button><a href="/dashboard/new">Create a new post</a></button>
+<h1>My posts</h1>
 {{#each blogs}}
   <div class="post">
     <h2><a href="/blog/{{id}}">{{title}}</a></h2>
     <p>{{content}}</p>
+  </div>
+{{/each}} --}}
+
+{{> menu }}
+
+<div class="my-4">
+  <button class="btn btn-primary"><a href="/dashboard/new" class="text-white">Create a new post</a></button>
+</div>
+
+<h1>My posts</h1>
+{{#each blogs}}
+  <div class="post card mb-4">
+    <div class="card-body">
+      <h2 class="card-title"><a href="/blog/{{id}}" class="text-decoration-none text-dark">{{title}}</a></h2>
+      <p class="card-text">{{content}}</p>
+    </div>
   </div>
 {{/each}}

@@ -1,4 +1,4 @@
-<div class="menu">
+{{!-- <div class="menu">
   <button><a href="/">Home</a></button>
   <button><a href="/dashboard">Dashboard</a></button>
   {{#if logged_in}}
@@ -6,5 +6,29 @@
   {{else}}
     <button><a href="/login">Login</a></button>
   {{/if}}
+</div>
+<script src="/js/logout.js"></script> --}}
+
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Tech Blog</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li>
+      {{#if logged_in}}
+        <li class="nav-item">
+          <button id="logout-btn" class="btn btn-light">Logout</button>
+        </li>
+      {{else}}
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+      {{/if}}
+    </ul>
+  </div>
 </div>
 <script src="/js/logout.js"></script>

@@ -1,7 +1,8 @@
-{{> menu }}
+{{!-- {{> menu }}
 
 <div class="post">
   <h2>{{title}}</h2>
+  <p>by {{user.username}} at {{createdAt}}</p>
   <p>{{content}}</p>
   {{#if isAuthor}}
     <button><a href="/edit/{{id}}">Edit</a></button>
@@ -12,10 +13,42 @@
   <textarea name="comment" required></textarea>
   <button type="submit">Add Comment</button>
 </form>
+<h2>Comments</h2>
 {{#each comments}}
   <div class="comment">
-    <p>{{user.username}}: {{comment_text}}</p>
+    <p>{{user.username}}: {{comment_text}} at {{createdAt}}</p>
   </div>
 {{/each}}
+<script src="/js/blog.js"></script> --}}
+
+{{> menu }}
+
+<div class="post card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">{{title}}</h2>
+    <p class="card-subtitle mb-2 text-muted">by {{user.username}} at {{createdAt}}</p>
+    <p class="card-text">{{content}}</p>
+    {{#if isAuthor}}
+      <button class="btn btn-primary"><a href="/edit/{{id}}" class="text-white">Edit</a></button>
+      <button class="delete-btn btn btn-danger" data-id="{{id}}">Delete</button>
+    {{/if}}
+  </div>
+</div>
+
+<form id="comment-form" data-id="{{id}}" class="mb-4">
+  <div class="form-group">
+    <textarea name="comment" required class="form-control"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Add Comment</button>
+</form>
+
+<h2 class="mb-3">Comments</h2>
+{{#each comments}}
+  <div class="comment card mb-3">
+    <div class="card-body">
+      <p class="card-text">{{user.username}}: {{comment_text}} at {{createdAt}}</p>
+    </div>
+  </div>
+{{/each}}
+
 <script src="/js/blog.js"></script>
-```
