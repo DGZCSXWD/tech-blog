@@ -1,0 +1,10 @@
+<div class="menu">
+  <button><a href="/">Home</a></button>
+  <button><a href="/dashboard">Dashboard</a></button>
+  {{#if logged_in}}
+    <button id="logout-btn">Logout</button>
+  {{else}}
+    <button><a href="/login">Login</a></button>
+  {{/if}}
+</div>
+<script src="/js/logout.js"></script>

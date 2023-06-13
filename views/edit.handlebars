@@ -1,0 +1,9 @@
+{{> menu }}
+
+<form id="edit-post-form" data-id="{{id}}">
+  <input type="text" name="title" value="{{title}}" required />
+  <textarea name="content" required>{{content}}</textarea>
+  <button type="submit">Update Post</button>
+</form>
+<script src="/js/edit.js"></script>
+```
