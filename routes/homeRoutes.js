@@ -3,7 +3,7 @@ const { User, Blog, Comment } = require("../models");
 const withAuth = require("../utilis/withAuth");
 
 //get all blogs
-router.get("/", withAuth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const blogData = await Blog.findAll({
       include: [
